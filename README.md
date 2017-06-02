@@ -1,2 +1,2 @@
 # DOM-BOM.hmwk 
-() => { https://OrestKupchakgithub.io/DOM-BOM.hmwk/list-of-users/}
+( ) => { https://OrestKupchak.github.io/DOM-BOM.hmwk/list-of-users/}
