@@ -36,6 +36,34 @@
                 </div>
               </div>
             </nav>
+
+          <input type="checkbox" id="localize" class="del"/><label for="localize" class="del">Change language</label>
+            <div class="localization">
+                  <div id="languages">
+                    <label>
+                      <input type="radio" name="lang"><img class="flag" src="ua.png">
+                    </label>
+                    <label>
+                      <input type="radio" name="lang"><img class="flag" src="sp.png">
+                    </label>
+                    <label>
+                      <input type="radio" name="lang"><img class="flag" src="en.png">
+                    </label>
+                  </div>
+
+                  <div id="welcome-message">
+                    <span class="lang lang-ua">Привіт</span>
+                    <span class="lang lang-sp">Hola</span>
+                    <span class="lang lang-eng">Hello</span>
+                    , username!
+                    <span class="lang lang-ua">Раді тебе бачити!</span>
+                    <span class="lang lang-sp">Сontento de verte!</span>
+                    <span class="lang lang-en">It's nice to see you!</span>
+                  </div>
+
+
+                  <button id="save">Save</button> 
+            </div>
             <!--Task1: Validation form: start-->
             <div class="container" id='valid'>
               <div class="banner">
@@ -161,6 +189,7 @@ Choose 32-bit or 64-bit version.
                           <script src="js/app.js"></script>
                           <script src="js/parallax.js"></script>
                           <script src='js/message.js'></script>
+                          <script src="js/localization.js"></script>
                           <script src="js/createForm.js" defer></script>
                            <script src='js/validation.js' defer></script>
                           <script src='js/validation-2.js' defer></script>

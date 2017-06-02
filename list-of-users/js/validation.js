@@ -20,8 +20,6 @@ function linkStopper(e){
 
 
 
-
-
 document.getElementById('nonStop').addEventListener('click', nonStop, false)
 
 function nonStop(e){
