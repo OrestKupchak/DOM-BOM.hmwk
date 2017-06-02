@@ -1,0 +1,107 @@
+body {
+background-image: url(map.png);
+background-repeat: no-repeat;
+background-size: auto 1500px;
+max-height: 1470px;
+}
+
+div#player {
+  width: 280px;
+  height: 225px;
+  background: transparent;
+  background-image: url(dragon.gif);
+  background-size: 100%;
+  transition: all 0.3s ease-out 0s;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  
+}
+
+div#fire {
+background-image: url(pyro.gif);
+background-repeat: no-repeat;
+background-size: cover;
+width: 150px;
+height: 150px;
+transition: top 3s ease-out 2s;
+position: absolute ;
+top: 0px;
+left: 0px;
+transform: rotate(180deg);
+}
+
+
+.fly {
+  display: block;
+  transition: top 3s ease-out 2s;
+  transition: left 3s ease-out 2s;
+
+}
+
+.fired {
+background: transparent;
+background-image: url(blow2.png);
+display: none;
+}
+
+.burn {
+	display: block;
+	position: absolute;
+	//background-color: red;
+	width: 40px;
+	height: 40px;
+	background-image: url('blow.gif');
+	visibility: hidden;
+}
+
+ img {
+ 	display: none;
+	width: 10%;
+	position: absolute;
+}
+
+img[src="burning2.gif"],
+img[src="burning3.gif"] {
+  width: 3%;
+}
+
+
+ #img1  {    top: 241px;
+    left: 524px;}
+ #img2  {top: 158px; left: 392px;} 
+ #img3  {    top: 284px;
+    left: 883px;}
+ #img4  {top: 300px; 
+    left: 1165px;} 
+ #img5  {top: 671px;
+    left: 86px;
+ transform: rotate(-23deg)}
+ #img6  {top: 714px;
+    left: 372px;}
+ #img7  {    top: 874px;
+    left: 669px;}
+ #img8  {top: 930px;
+    left: 1003px;}
+
+ #img9  {top:121px; left:335px;}
+ #img10  {top:83px; left:488px;}
+ #img11  {top:370px ; left:1100px;}
+ #img12  {top:403px; left:1200px;}
+ #img13  {    top: 612px;
+    left: 880px;}
+ #img14  {    top: 537px;
+    left: 1161px;}
+ #img15  {    top: 586px;
+    left: 1203px;}
+ #img16  {    top: 335px;
+    left: 900px;}
+ #img17  {left: 1066px;
+    top: 194px;}
+ #img18  {    top: 350px;
+    left: 1252px;}
+ #img19  {    top: 953px;
+    left: 1009px;}
+ #img20  {top: 1146px;
+    left: 1199px;}
+ 

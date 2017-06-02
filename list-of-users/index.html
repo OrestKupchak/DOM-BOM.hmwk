@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en, ua">
+  <head>
+    <meta charset="utf-8">
+      <title>DOM-BOM Homework</title>
+      <link rel="stylesheet" href="css/styles.css">
+      </head>
+      <body>
+        <!--Menu section start-->
+        <header class="main-header">
+          <nav class="navbar navbar-default">
+            <div class="nav">
+              <div class="rock"> Homework Rocks</div>
+              <div class="logo">
+                <a href="#">
+                  <img src="css/elvis-anim.gif" alt="logo">
+                  </a>
+                </div>
+                <div>
+                  <a href="#valid">Task 1-4</a>
+                </div>
+                <div>
+                  <a href="#OSmessage">Task 5</a>
+                </div>
+                <div>
+                  <a href="../game/index.html" id='prevent'>Additional: The Game</a>
+                </div>
+                <div>
+                  <a href="#dynamical-list">Additional: User list</a>
+                </div>
+              </div>
+            </nav>
+            <!--Task1: Validation form: start-->
+            <div class="container" id='valid'>
+              <div class="banner">
+                <h2>YOU THINK PEER-REVIEWING IS BORING ?</h2>
+                <h4>We'll show you...that homework rock's</h4>
+                <p>Get free acces to all homeworks.</p>
+                <p> Review cool tasks without any subscription! Join us and become CURSOR'S top peer-reviewer</p>
+                <input id="reg" type="button" name="" value="Register" onclick="createForm()">
+                  <div id="registration"></div>
+                </div>
+              </div>
+            </header>
+            <!--Task1: Validation form: end-->
+            <!--Menu section end-->
+            <!--Parallax 1 - start -->
+            <div id="parallax"></div>
+            <!--Parallax 1 - end -->
+            <!--Task 3: System message - start-->
+            <div class="content game" id='OSmessage'>
+              <div class="wrap message">
+                <div>Download this hmwk</div>
+                <img id="download" src="css/download.png">
+                  <div class="os-messages">
+                    <div class="download-message" data-version="macos">
+  You are using MacOS.
+
+                      <br>
+  Download  our homework app from AppleStore.
+
+
+                      </div>
+                      <div class="download-message" data-version="windows">
+You are using OS Windows.
+
+                        <br>
+Choose 32-bit or 64-bit version.
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap">
+                      <h2>Got tired of codin' and reviwing?</h2>
+                      <h3>Chill out! Get free trial Dragons&Coders v.1.01
+
+                        <br>
+ Download or Play online
+
+                        </h3>
+                      </div>
+
+                      <div class="advertisement" id="stop">
+                        <a href="../game/index.html" >
+                          <div class="animated-logo">
+
+                            <!-- <a href="../game/index.html"  id="stop"> -->
+                               <img src="css/dragon-logo2.png" class="drag-logo" >
+                          <!--  </a> -->
+                                <a href="../game/index.html" id="nonStop" >
+                                  <img class="big" src="css/big-dragon.gif" >
+                                </a>
+
+                            </div>
+                              </a>
+                          </div>
+
+                        </div>
+                        <!--Task 3: System message - start-->
+                        <!-- Parralax 2 -->
+                        <div id="parallax2"></div>
+                        <!-- Parralax 2 -->
+                        <!--Task Additional: List of users - start-->
+                        <!-- Additional:  input info for new employee - start-->
+                        <div class="content forms" id='dynamical-list'>
+                          <form name="personal-info" class="values">
+                            <label>
+       Employee's name:
+
+                              <input id ="firstName" type="text" data-type="text" value="" placeholder="First name" name="firstname" data-valid="false"/>
+                            </label>
+                            <label>
+       Employee's surname:
+
+                              <input id ="lastName" type="text" data-type="text" value="" placeholder="Last name" name="lastname" data-valid="false"/>
+                            </label>
+                            <label>
+        Compensation:
+
+                              <input id ="salary" type="text" data-type="digit" value="" placeholder="Salary $" name="salary" data-valid="false"/>
+                            </label>
+                            <label>
+        Employee's position:
+
+                              <input id ="position" type="text" data-type="text" value="" placeholder="Position" name="position" data-valid="false"/>
+                            </label>
+                            <label>
+        Limit:
+
+                              <input id ="limit" type="digit" data-type="digit" value="10" placeholder="Limit" name="limit" data-valid="false"/>
+                            </label>
+                          </form>
+                          <div class="actions">
+                            <input type='submit' class="addEmployee" value="Add New" onclick="addNew()" />
+                            <input type='submit' id="statist" value="Get Statistics" />
+                            <input type='submit' id="average" value="" />
+                            <div class="statistic"></div>
+                          </div>
+                          <!--
+ <div class="form-buttons"><input type="submit" value="save" /><input type="reset" value="reset" /></div>
+-->
+                          <div class="show-list">
+                            <ul class="employeeList">
+                              <li>
+                                <span class="employeeFirstName">John</span>
+                                <span class="employeeLastName">Doe</span>
+                                <span class="employeeSalary" id="salary">1000</span>
+                                <span class="employeePosition">Manager</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- Additional:  input info for new employee - end-->
+                          <!--Task Additional: List of users - end-->
+                          <script src="js/app.js"></script>
+                          <script src="js/parallax.js"></script>
+                          <script src='js/message.js'></script>
+                          <script src="js/createForm.js" defer></script>
+                           <script src='js/validation.js' defer></script>
+                          <script src='js/validation-2.js' defer></script>
+                          <script src='js/statistics.js' defer></script>
+                        </body>
+                      </html>
