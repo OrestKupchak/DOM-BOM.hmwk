@@ -1,3 +1,5 @@
+
+var personsList = []
 function addNew() {
     //debugger
 
@@ -33,13 +35,14 @@ function addNew() {
 
     var newlist = document.getElementsByClassName("employeeList")[0].getElementsByTagName('li')
 
-/*
-var list = document.querySelector('.show-list')
-var elements = list.getElementsByTagName('span')
-for (var i = 0; i <= elements.length; i++){
-console.log(elements[i].innerText)
-}
-*/  var spacesPattern = /^[\s]+$/; // RegEx pattern to review if text contains no chars, only spaces
+
+    
+    var person = { 'firstname':  employeeFirstName.innerText, 'lastname': employeeLastName.innerText}
+    personsList.push(person);
+
+
+
+ var spacesPattern = /^[\s]+$/; // RegEx pattern to review if text contains no chars, only spaces
     var namePattern = /^([A-Za-z]{2}[ éàëA-Za-z]*)$/;  //RegEx pattern for validation of Usernames
 
 
@@ -56,29 +59,67 @@ console.log(elements[i].innerText)
 
 /*----------------------------------TODO: Update data duplicate validation----------------------------------------------*/
 
-          var employeesData = document.querySelector('.show-list')
-            var elements = employeesData.getElementsByTagName('span')
-            for (var i = 0; i < elements.length; i++){
-                if (document.getElementById('firstName').value.toLowerCase() ===  elements[i].innerText.toLowerCase() ) {
-                  if (document.getElementById('lastName').value.toLowerCase() === elements[i+1].innerText.toLowerCase()) {
-                   alert('This person is already signed, check your list')
-                    return false
-                    }
 
-                  }
-                      //return;
-                }
-                    //console.log(firstName + ' match ' + elements[i].innerText)
 
-/*----------------------------------:Updating data validation----------------------------------------------*/
-
+    
           if (average >= 2000) {
               alert('You can\'t get more than ' + limit + ' new employees, avarage salary os over 2000')
           } else if (newlist.length < limit) {
-              list.appendChild(newEmployee)
+              for (var i = 0; i <= personsList.length; i++) {
+                    if (personsList.includes(person)) {
+                        alert('This person is already signed, check the list')
+                        return false
+                        } else {
+                          list.appendChild(newEmployee) 
+                      }
+                  }       
           } else {
               alert('You can\'t get more than ' + limit + ' new employees, you don\'t have that much money :)')
           }
         }
 
+
+/*----------------------------------:Updating data validation----------------------------------------------*/
+
         }
+
+
+
+
+/*
+
+ var invalidArr = [];
+    var validationArr = [];
+    employeeKeys = getEmployeesNumberArr();
+    var isDuplicate = isDuplicateFunc(employeeKeys);
+    console.log()
+
+
+function isDuplicateFunc(employeeKeys) {
+  var isDuplicate = false;
+  if (employeeKeys && employeeKeys.length) {
+    for (var j = 0; j < employeeKeys.length; j++) { //1,2
+      var key = employeeKeys[j];
+      var _employeeArr = JSON.parse(localStorage.getItem('employee-' + key));
+      var existingFirstName,
+          existingLastName;
+
+      if (_employeeArr && _employeeArr.length) {
+        for (var key in _employeeArr) {
+          if (_employeeArr[key].firstname) {
+            existingFirstName = _employeeArr[key].firstname;
+          }
+          if (_employeeArr[key].lastname) {
+            existingLastName = _employeeArr[key].lastname;
+          }
+        }
+        if (elements.firstname.value.trim().toLowerCase() === existingFirstName.trim().toLowerCase()
+            && elements.lastname.value.trim().toLowerCase() === existingLastName.trim().toLowerCase()) {
+          isDuplicate = true;
+        }
+      }
+    }
+  }
+  return isDuplicate;
+}
+*/
