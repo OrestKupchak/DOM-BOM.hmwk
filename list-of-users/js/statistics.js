@@ -20,25 +20,3 @@ var average = total/salaryList.length
 document.getElementById('average').setAttribute('value', 'Average salary = '+average)
 }
 
-
-/*
-function getAverageSalary() {
-
-  var keys = employeeKeys;
-  var salarySum = 0;
-
-  if (localStorage) {
-    if (keys && keys.length) {
-      for (var j = 0; j < keys.length; j++) {
-        var key = keys[j];
-        var employeeArr = JSON.parse(localStorage.getItem('employee-' + key));
-
-        salarySum += employeeArr
-            .map(function(el) {if(el.salary) {return parseInt(el.salary)}})
-            .filter(function(el) {return el;})[0];
-      }
-      return parseInt(salarySum/keys.length);
-    }
-  }
-}
-*/
