@@ -17,6 +17,6 @@ for (var i = 1; i <= salaryList.length; ++i) {
 }
 var average = total/salaryList.length
 
-document.getElementById('average').setAttribute('value', 'Average salary = '+average)
+document.getElementById('average').setAttribute('value', average + ' - avarage salary')
 }
 

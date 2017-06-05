@@ -1,5 +1,6 @@
 
-var personsList = []
+var personsList = document.getElementsByClassName("employeeList")[0].innerText
+
 function addNew() {
     //debugger
 
@@ -8,7 +9,7 @@ function addNew() {
     var salary = document.getElementById('salary').value;
     var position = document.getElementById('position').value;
     var limit = document.getElementById('limit').value;
-    var average = document.getElementById('average').value;
+    var average = parseInt(document.getElementById('average').value);
 
 
     var list = document.getElementsByClassName("employeeList")[0];
@@ -35,11 +36,8 @@ function addNew() {
 
     var newlist = document.getElementsByClassName("employeeList")[0].getElementsByTagName('li')
 
-
-    
-    var person = { 'firstname':  employeeFirstName.innerText, 'lastname': employeeLastName.innerText}
-    personsList.push(person);
-
+    var person = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+  
 
 
  var spacesPattern = /^[\s]+$/; // RegEx pattern to review if text contains no chars, only spaces
@@ -57,69 +55,30 @@ function addNew() {
             alert('Position data is not valid!')
         } else {
 
-/*----------------------------------TODO: Update data duplicate validation----------------------------------------------*/
 
-
-
-    
           if (average >= 2000) {
               alert('You can\'t get more than ' + limit + ' new employees, avarage salary os over 2000')
           } else if (newlist.length < limit) {
-              for (var i = 0; i <= personsList.length; i++) {
-                    if (personsList.includes(person)) {
-                        alert('This person is already signed, check the list')
-                        return false
-                        } else {
-                          list.appendChild(newEmployee) 
-                      }
-                  }       
+              for (var i = 0; i < newlist.length; ++i) {
+                        console.log('i', i)
+                    if (newlist[i].innerText.includes(person)) {
+                          console.log(newlist[i].innerText.includes(person))
+                          console.log('newlist',i, newlist[i].innerText)
+                          console.log('person' ,person)
+                          alert('This person is already in list. Check it up!')
+                         return;
+                        }
+                    } 
+                    personsList += person;
+                    console.log(personsList)
+                    list.appendChild(newEmployee) 
+                      
+                       
           } else {
               alert('You can\'t get more than ' + limit + ' new employees, you don\'t have that much money :)')
           }
         }
 
-
-/*----------------------------------:Updating data validation----------------------------------------------*/
-
-        }
-
-
-
-
-/*
-
- var invalidArr = [];
-    var validationArr = [];
-    employeeKeys = getEmployeesNumberArr();
-    var isDuplicate = isDuplicateFunc(employeeKeys);
-    console.log()
-
-
-function isDuplicateFunc(employeeKeys) {
-  var isDuplicate = false;
-  if (employeeKeys && employeeKeys.length) {
-    for (var j = 0; j < employeeKeys.length; j++) { //1,2
-      var key = employeeKeys[j];
-      var _employeeArr = JSON.parse(localStorage.getItem('employee-' + key));
-      var existingFirstName,
-          existingLastName;
-
-      if (_employeeArr && _employeeArr.length) {
-        for (var key in _employeeArr) {
-          if (_employeeArr[key].firstname) {
-            existingFirstName = _employeeArr[key].firstname;
-          }
-          if (_employeeArr[key].lastname) {
-            existingLastName = _employeeArr[key].lastname;
-          }
-        }
-        if (elements.firstname.value.trim().toLowerCase() === existingFirstName.trim().toLowerCase()
-            && elements.lastname.value.trim().toLowerCase() === existingLastName.trim().toLowerCase()) {
-          isDuplicate = true;
-        }
-      }
-    }
-  }
-  return isDuplicate;
 }
-*/
+
+
